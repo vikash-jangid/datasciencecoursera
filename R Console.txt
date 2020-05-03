@@ -1,0 +1,528 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7735) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/.Rapp.history]
+
+> for (i in 1:10) {print(i)}
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+> x <- c("a", "b", "c", "d")
+> for (i in 1:4){print(x[i])}
+[1] "a"
+[1] "b"
+[1] "c"
+[1] "d"
+> read.csv <- data (file = "/Users/apple/RDetails/Data/hw1_data.csv")
+Warning message:
+In data(file = "/Users/apple/RDetails/Data/hw1_data.csv") :
+  data set ‘/Users/apple/RDetails/Data/hw1_data.csv’ not found
+> data <-read.csv (file = "/Users/apple/RDetails/Data/hw1_data.csv")
+> x <- c("a", "b", "c", "d") for (i in 1:4){print(x[i])}
+Error: unexpected 'for' in "x <- c("a", "b", "c", "d") for"
+> x <- c("a", "b", "c", "d") for (i in 1:4){print(x[i])}
+Error: unexpected 'for' in "x <- c("a", "b", "c", "d") for"
+> 
+> x <- c("a", "b", "c", "d") for (i in 1:4){print(x[i])}
+Error: unexpected 'for' in "x <- c("a", "b", "c", "d") for"
+> 
+> x <- c("a", "b", "c", "d")
+> 
+> for (i in 1:4){print(x[i])}
+[1] "a"
+[1] "b"
+[1] "c"
+[1] "d"
+> x <- matrix(1:6, 2, 3)
+> for(i in seq_len(nrow(x))) {
++   for(j in seq_len(ncol(x))) {
++     print(x[i, j])
++   } }
+[1] 1
+[1] 3
+[1] 5
+[1] 2
+[1] 4
+[1] 6
+> count <- 0
+> > while(count < 10) {
+Error: unexpected '>' in ">"
+> print(count) count <- count + 1}
+Error: unexpected symbol in "print(count) count"
+> count <- 0
+> > while (count < 10) {print (count) count <- count + 1}
+Error: unexpected '>' in ">"
+> count <- 0
+>  while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in " while (count < 10) {print (count) count"
+> count <- 0 while (count < 10) {print (count) count <- count + 1}
+Error: unexpected 'while' in "count <- 0 while"
+> 
+> count <- 0
+> while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count) count"
+> count <- 0
+> while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count) count"
+> count <- 0
+> while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count) count"
+> count <- 0
+> while (count < 10) {+ print (count) +count <- count + 1+}
+Error: unexpected '}' in "while (count < 10) {+ print (count) +count <- count + 1+}"
+> count <- 0
+> while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count) count"
+> while (count < 10) {print (count)count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count)count"
+> while (count < 10) {print (count) count <- count + 1}
+Error: unexpected symbol in "while (count < 10) {print (count) count"
+> while (count < 10) {print (count); count <- count + 1}
+[1] 0
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+> z <- 5
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5) +
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+Error in coin : object 'coin' not found
+> > print(z) [1] 2
+Error: unexpected '>' in ">"
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z) [1] 2
+Error: unexpected '>' in ">"
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z) [1] 2
+Error: unexpected '>' in ">"
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z) [1] 2
+Error: unexpected '>' in ">"
+> 
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z) [1] 2
+Error: unexpected '>' in ">"
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z)
+Error: unexpected '>' in ">"
+> z <-5
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z)
+Error: unexpected '>' in ">"
+> z <-5
+> set.seed(1)
+> while(z >= 3 && z <= 10) {coin <- rbinom(1, 1, 0.5)
++  if(coin == 1) { ## random walk
++ z<-z+1
++ } else { z <-z-1
++ } }
+> > print(z)
+Error: unexpected '>' in ">"
+> z <-5
+> while (z >= 3 && z <= 10) {
++       coin <- rbinom (1, 1, 0.5)
++         if(coin == 1) { ## random walk
++                 z <- z+1
++         } else {
++                 z <-z-1}
++         }
+> print(z)
+[1] 11
+> x0 <- 1; tol <- 1e-8
+> repeat {
++   x1 <- computeEstimate()
++   if(abs(x1 - x0) < tol) { ## Close enough? break
++   } else {
++     x0 <- x1
++   } }
+Error in computeEstimate() : could not find function "computeEstimate"
+> require("sos")
+Loading required package: sos
+Warning message:
+In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
+  there is no package called ‘sos’
+> install SOS
+Error: unexpected symbol in "install SOS"
+> install sos
+Error: unexpected symbol in "install sos"
+> install "sos"
+Error: unexpected string constant in "install "sos""
+trying URL 'https://cran.curtin.edu.au/bin/macosx/el-capitan/contrib/3.6/sos_2.0-0.tgz'
+Content type 'application/x-gzip' length 277145 bytes (270 KB)
+==================================================
+downloaded 270 KB
+
+
+The downloaded binary packages are in
+	/var/folders/3_/xp5pg2t17gg7s9_z_yj2kfh80000gn/T//RtmpZvsKyD/downloaded_packages
+> require("sos")
+Loading required package: sos
+Loading required package: brew
+
+Attaching package: ‘sos’
+
+The following object is masked from ‘package:utils’:
+
+    ?
+
+> x0 <- 1; tol <- 1e-8
+> repeat {
++   x1 <- computeEstimate()
++   if(abs(x1 - x0) < tol) { ## Close enough? break
++   } else {
++     x0 <- x1
++   } }
+Error in computeEstimate() : could not find function "computeEstimate"
+> install sos
+Error: unexpected symbol in "install sos"
+> install.package(sos)
+Error in install.package(sos) : could not find function "install.package"
+> istall.sos
+Error: object 'istall.sos' not found
+trying URL 'https://cran.curtin.edu.au/bin/macosx/el-capitan/contrib/3.6/sos_2.0-0.tgz'
+Content type 'application/x-gzip' length 277145 bytes (270 KB)
+==================================================
+downloaded 270 KB
+
+
+The downloaded binary packages are in
+	/var/folders/3_/xp5pg2t17gg7s9_z_yj2kfh80000gn/T//RtmpZvsKyD/downloaded_packages
+> for(i in 1:100) { if(i <= 20) {
++                 ## Skip the first 20 iterations
++ next
++         ## Do something here
++ }
++ }
+> print (i)
+[1] 100
+> for(i in 1:100) { if(i <= 20) {
++                 ## Skip the first 20 iterations
++         ## Do something here
++ }
++ }
+> print (i)
+[1] 100
+> for(i in 1:100) { print(i)
++ if(i > 20) {
++ ## Stop loop after 20 iterations break
++ } }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] 33
+[1] 34
+[1] 35
+[1] 36
+[1] 37
+[1] 38
+[1] 39
+[1] 40
+[1] 41
+[1] 42
+[1] 43
+[1] 44
+[1] 45
+[1] 46
+[1] 47
+[1] 48
+[1] 49
+[1] 50
+[1] 51
+[1] 52
+[1] 53
+[1] 54
+[1] 55
+[1] 56
+[1] 57
+[1] 58
+[1] 59
+[1] 60
+[1] 61
+[1] 62
+[1] 63
+[1] 64
+[1] 65
+[1] 66
+[1] 67
+[1] 68
+[1] 69
+[1] 70
+[1] 71
+[1] 72
+[1] 73
+[1] 74
+[1] 75
+[1] 76
+[1] 77
+[1] 78
+[1] 79
+[1] 80
+[1] 81
+[1] 82
+[1] 83
+[1] 84
+[1] 85
+[1] 86
+[1] 87
+[1] 88
+[1] 89
+[1] 90
+[1] 91
+[1] 92
+[1] 93
+[1] 94
+[1] 95
+[1] 96
+[1] 97
+[1] 98
+[1] 99
+[1] 100
+> 
+> for(i in 1:100) { print(i)
++ if(i > 20) {
++ ## Stop loop after 20 iterations break
++ break } }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+> for(i in 1:100) { print(i)
++ if(i > 20) {
++ ## Stop loop after 20 iterations break
++ next } }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+[1] 22
+[1] 23
+[1] 24
+[1] 25
+[1] 26
+[1] 27
+[1] 28
+[1] 29
+[1] 30
+[1] 31
+[1] 32
+[1] 33
+[1] 34
+[1] 35
+[1] 36
+[1] 37
+[1] 38
+[1] 39
+[1] 40
+[1] 41
+[1] 42
+[1] 43
+[1] 44
+[1] 45
+[1] 46
+[1] 47
+[1] 48
+[1] 49
+[1] 50
+[1] 51
+[1] 52
+[1] 53
+[1] 54
+[1] 55
+[1] 56
+[1] 57
+[1] 58
+[1] 59
+[1] 60
+[1] 61
+[1] 62
+[1] 63
+[1] 64
+[1] 65
+[1] 66
+[1] 67
+[1] 68
+[1] 69
+[1] 70
+[1] 71
+[1] 72
+[1] 73
+[1] 74
+[1] 75
+[1] 76
+[1] 77
+[1] 78
+[1] 79
+[1] 80
+[1] 81
+[1] 82
+[1] 83
+[1] 84
+[1] 85
+[1] 86
+[1] 87
+[1] 88
+[1] 89
+[1] 90
+[1] 91
+[1] 92
+[1] 93
+[1] 94
+[1] 95
+[1] 96
+[1] 97
+[1] 98
+[1] 99
+[1] 100
+> for(i in 1:100) { print(i)
++ if(i > 20) {
++ ## Stop loop after 20 iterations break
++ break } }
+[1] 1
+[1] 2
+[1] 3
+[1] 4
+[1] 5
+[1] 6
+[1] 7
+[1] 8
+[1] 9
+[1] 10
+[1] 11
+[1] 12
+[1] 13
+[1] 14
+[1] 15
+[1] 16
+[1] 17
+[1] 18
+[1] 19
+[1] 20
+[1] 21
+> f <- function(){}
+> class(f)
+[1] "function"
+> f()
+NULL
+> f(1)
+Error in f(1) : unused argument (1)
+> 
